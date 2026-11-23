@@ -1,0 +1,27 @@
+[project]
+name = "knowbackup"
+version = "0.1.0"
+description = "Search tool for historical customer service conversations"
+requires-python = ">=3.10"
+dependencies = [
+    "faiss-cpu>=1.9",
+    "flask>=3.1",
+    "jieba>=0.42",
+    "leidenalg>=0.10",
+    "igraph>=0.11",
+    "numpy>=2.0",
+    "openpyxl>=3.1",
+    "rank-bm25>=0.2",
+    "requests>=2.32",
+    "pillow>=12.3.0",
+    "imagehash>=4.3.2",
+]
+
+[[tool.uv.index]]
+url = "https://mirrors.aliyun.com/pypi/simple/"
+default = true
+
+[project.optional-dependencies]
+local-models = [
+    "sentence-transformers>=5.0",
+]
